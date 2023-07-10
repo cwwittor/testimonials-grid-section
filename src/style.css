@@ -1,0 +1,92 @@
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url("./assets/Barlow_Semi_Condensed/BarlowSemiCondensed-Regular.ttf");
+}
+
+:root {
+  --purple: hsl(263, 55%, 52%);
+  --blue-grey: hsl(217, 19%, 35%);
+  --white: hsl(0, 0%, 100%);
+  --navy: hsl(219, 29%, 14%);
+
+  --header-text: 1.25rem;
+  --item-title: 0.688rem;
+  --item-name: 0.813rem;
+
+  --regular: 400;
+  --medium: 500;
+  --semi-bold: 600;
+  --bold: 700;
+
+  --title-opacity: 0.5;
+  --paragraph-opacity: 0.7;
+
+  --barlow: "Barlow Semi Condensed", sans-serif;
+}
+
+body {
+  color: var(--white);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(170, 88%, 56%);
+}
+
+.item-box {
+  border-radius: 1rem;
+}
+
+.purple-item-box {
+  background-color: var(--purple);
+}
+
+.blue-grey-item-box {
+  background-color: var(--blue-grey);
+}
+
+.white-item-box {
+  color: var(--blue-grey);
+  background-color: var(--white);
+}
+
+.navy-item-box {
+  background-color: var(--navy);
+}
+
+.item-header {
+  font-family: var(--barlow);
+  font-size: var(--header-text);
+  font-weight: var(--semi-bold);
+}
+
+.item-paragraph {
+  opacity: var(--paragraph-opacity);
+  font-size: var(--item-name);
+  font-family: var(--barlow);
+  font-weight: var(--medium);
+}
+
+.item-name {
+  font-family: var(--barlow);
+  font-size: var(--item-name);
+  font-weight: var(--medium);
+}
+
+.item-title {
+  opacity: var(--title-opacity);
+  font-family: var(--barlow);
+  font-size: var(--item-title);
+  font-weight: var(--medium);
+}
+
+.itemImg {
+}
+
+/* Moderate violet: hsl(263, 55%, 52%)
+Very dark grayish blue: hsl(217, 19%, 35%)
+Very dark blackish blue: hsl(219, 29%, 14%)
+White: hsl(0, 0%, 100%) */
