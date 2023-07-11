@@ -5,13 +5,17 @@
 
 :root {
   --purple: hsl(263, 55%, 52%);
+  --light-purple: #a775f1;
   --blue-grey: hsl(217, 19%, 35%);
   --white: hsl(0, 0%, 100%);
   --navy: hsl(219, 29%, 14%);
+  --grey: #ecf2f8;
 
   --header-text: 1.25rem;
   --item-title: 0.688rem;
   --item-name: 0.813rem;
+
+  --paragraph-line-height: 1.125rem;
 
   --regular: 400;
   --medium: 500;
@@ -25,7 +29,13 @@
 }
 
 body {
+  display: grid;
+  grid-template-columns: 1fr; /* one column */
+  grid-gap: 1.5rem;
   color: var(--white);
+  background-color: var(--grey);
+  padding: 0 1rem 0 1rem;
+  margin-bottom: 4rem;
 }
 
 .attribution {
@@ -37,11 +47,44 @@ body {
 }
 
 .item-box {
+  padding: 1.5rem 2rem 1.25rem 2rem;
   border-radius: 1rem;
+}
+
+.flex-user {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.width-img {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.image-circle {
+  border-radius: 50%;
+}
+
+.image-border-purple {
+  border: solid 0.125rem var(--light-purple); /* Replace #000000 with your desired border color */
+}
+
+.image-border-dark-purple {
+  border: solid 0.125rem var(--purple); /* Replace #000000 with your desired border color */
 }
 
 .purple-item-box {
   background-color: var(--purple);
+  background-image: url("./images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 1rem) top;
 }
 
 .blue-grey-item-box {
@@ -51,6 +94,7 @@ body {
 .white-item-box {
   color: var(--blue-grey);
   background-color: var(--white);
+  box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.2);
 }
 
 .navy-item-box {
@@ -68,6 +112,7 @@ body {
   font-size: var(--item-name);
   font-family: var(--barlow);
   font-weight: var(--medium);
+  line-height: var(--paragraph-line-height);
 }
 
 .item-name {
