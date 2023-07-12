@@ -29,6 +29,10 @@
 }
 
 body {
+  background-color: var(--grey);
+}
+
+.main-container {
   display: grid;
   grid-template-columns: 1fr; /* one column */
   grid-gap: 1.5rem;
@@ -48,7 +52,7 @@ body {
 
 .item-box {
   padding: 1.5rem 2rem 1.25rem 2rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
 }
 
 .flex-user {
@@ -131,7 +135,42 @@ body {
 .itemImg {
 }
 
-/* Moderate violet: hsl(263, 55%, 52%)
-Very dark grayish blue: hsl(217, 19%, 35%)
-Very dark blackish blue: hsl(219, 29%, 14%)
-White: hsl(0, 0%, 100%) */
+@media (min-width: 90rem) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .main-container {
+    max-width: 1100px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+    color: var(--white);
+    background-color: var(--grey);
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .wide-expand {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .tall-expand {
+    grid-column: 4;
+    grid-row: 1 / span 2;
+  }
+
+  .parent-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .purple-item-box {
+    background-position: calc(100% - 5.6rem) top;
+  }
+}
